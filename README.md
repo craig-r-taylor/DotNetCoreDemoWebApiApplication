@@ -26,16 +26,33 @@ Implementing Entity Framework Core in ASP.NET Core WebApi – Code-First Approac
 
 DB Initializer for seeding data
 
-Using SQLite DB (locally created by initializer)
+Using SQLite DB (locally created by initializer) https://sqlitebrowser.org/
 
 Trying out Model abstraction and table per model approach
 
+Setup:
+
+Clone or get zip file
+
+Open with Visual Studio and run the application
+
+The DB can be removed from the root folder as the initializer can generate it
+
+To reset the DB you can run the following from the project using the commandline
+
+    dotnet ef migrations remove --force
+
+    dotnet ef migrations add InitialCreate
+    
+    dotnet ef database update
 
 TODO:
 
 Add interfaces for the actions
 
 Add DTO's so we can also persist: created date, modified date, is deleted, etc.
+
+Try out Kestrel instead of IIS Express
 
 Unit tests
 
